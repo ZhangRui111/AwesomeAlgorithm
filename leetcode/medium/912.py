@@ -72,7 +72,7 @@ class Solution1_1:
 
     def randomized_partition(self, nums, low, high):
         pivot_idx = random.randint(low, high)  # 随机选择pivot
-        nums[low], nums[pivot_idx] = nums[pivot_idx], nums[low]  # pivot放置到最左边
+        self.swap(nums, pivot_idx, low)  # pivot放置到最左边
         return self.partition(nums, low, high)
 
     def swap(self, nums, a, b):
