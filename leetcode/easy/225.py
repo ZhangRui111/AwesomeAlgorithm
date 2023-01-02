@@ -3,8 +3,6 @@ tag: 栈；设计；队列
 225. 用队列实现栈
 https://leetcode.cn/problems/implement-stack-using-queues/
 """
-
-
 from collections import deque
 
 

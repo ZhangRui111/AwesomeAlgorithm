@@ -1,11 +1,8 @@
 """
-tag:
+tag: 栈；设计；队列
 232. 用栈实现队列
 https://leetcode.cn/problems/implement-queue-using-stacks/
 """
-
-
-from collections import deque
 
 
 class MyQueue1:
@@ -14,8 +11,8 @@ class MyQueue1:
         """
         Initialize your data structure here.
         """
-        self.stackA = deque()
-        self.stackB = deque()
+        self.stackA = []
+        self.stackB = []
 
     def push(self, x: int) -> None:
         """
@@ -44,3 +41,27 @@ class MyQueue1:
         Returns whether the queue is empty.
         """
         return not self.stackA
+
+
+class MyQueue2:
+    """ 更高效：一个栈只负责入队，一个栈只负责出队 """
+    def __init__(self):
+        self.stack_in, self.stack_out = [], []
+
+    def push(self, x: int) -> None:
+        self.stack_in.append(x)
+
+    def pop(self) -> int:
+        if not self.stack_out:
+            while self.stack_in:
+                self.stack_out.append(self.stack_in.pop())
+        return self.stack_out.pop()
+
+    def peek(self) -> int:
+        if self.stack_out:
+            return self.stack_out[-1]
+        else:
+            return self.stack_in[0]
+
+    def empty(self) -> bool:
+        return not self.stack_in and not self.stack_out
