@@ -4,6 +4,8 @@ tag: 动态规划
 https://leetcode.cn/problems/climbing-stairs/
 """
 
+# 同 剑指 Offer 10- II. 青蛙跳台阶问题 (easy)
+
 
 class Solution0:
     """ Recursion (time-consuming) """
