@@ -25,12 +25,13 @@ class Solution0:
                 power >>= 1
             return res
 
-        if n % 3 == 0:
-            return quick_power(3, (n // 3))
-        elif n % 3 == 1:
-            return quick_power(3, (n - 4) // 3) * 4
+        a, b = n % 3, n // 3
+        if a == 0:
+            return quick_power(3, b)
+        elif a == 1:
+            return quick_power(3, b - 1) * 4
         else:
-            return quick_power(3, (n // 3)) * 2
+            return quick_power(3, b) * 2
 
 
 class Solution1:
