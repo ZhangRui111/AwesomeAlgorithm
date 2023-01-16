@@ -55,7 +55,7 @@ class Solution2:
     def reverseList(self, head: ListNode) -> ListNode:
         def recur(cur, pre):
             if not cur:
-                return pre  # 终止条件
+                return pre  # 终止条件: 仅执行了一次，pre 保存为 res 并一直没变
             res = recur(cur.next, cur)  # 递归后继节点
             cur.next = pre  # 修改节点引用指向
             return res  # 返回反转链表的头节点
