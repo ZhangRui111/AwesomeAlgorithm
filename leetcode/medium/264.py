@@ -50,7 +50,7 @@ class Solution1:
                 if nxt not in seen:
                     seen.add(nxt)
                     heapq.heappush(heap, nxt)
-                
+
                 # # 赋值表达式/海象运算符 Python >= 3.8
                 # if (nxt := cur * factor) not in seen:
                 #     seen.add(nxt)
