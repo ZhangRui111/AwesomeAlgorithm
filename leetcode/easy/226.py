@@ -4,6 +4,7 @@ tag: 树；递归
 https://leetcode.cn/problems/invert-binary-tree/
 """
 
+# 同 剑指 Offer 27. 二叉树的镜像 (easy)
 
 # Definition for a binary tree node.
 class TreeNode:
@@ -21,5 +22,6 @@ class Solution:
             node.left, node.right = node.right, node.left
             dfs(node.left)
             dfs(node.right)
+
         dfs(root)
         return root
