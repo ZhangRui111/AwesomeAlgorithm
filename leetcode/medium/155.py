@@ -3,6 +3,9 @@ tag: 栈，设计
 155. 最小栈
 https://leetcode.cn/problems/min-stack/
 """
+
+# 同 剑指 Offer 30. 包含min函数的栈 (easy)
+
 import math
 
 
